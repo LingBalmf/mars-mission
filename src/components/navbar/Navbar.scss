@@ -1,0 +1,42 @@
+@import "../../constants.scss";
+
+$navbar-height: 3rem;
+$logo-margin: 0.25rem;
+
+nav {
+  background-color: $primary-dark;
+  display: flex;
+  height: $navbar-height;
+
+  .logo {
+    display: inline;
+    margin: $logo-margin;
+
+    img {
+      height: $navbar-height - (2 * $logo-margin);
+      width: $navbar-height - (2 * $logo-margin);
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    li a {
+      display: flex;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: $foreground-colour;
+      height: $navbar-height;
+      padding: 0 1rem;
+      align-items: center;
+
+      &:hover {
+        background-color: $primary-colour;
+      }
+    }
+  }
+}
